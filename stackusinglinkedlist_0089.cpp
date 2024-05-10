@@ -75,7 +75,12 @@ int main(){
             if (stack.isEmpty()){
                 stack.pop(); // Pop the top elment from the stack
             }
+            else{
+                cout << "Stack is empty. Cannot pop." << endl;
+            }
             break;
+        case 3:
+            else{}
         }
 
     }
