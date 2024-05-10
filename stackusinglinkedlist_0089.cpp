@@ -44,5 +44,10 @@ public:
             cout << endl;
         }// Return the value of hte top node
     }
+
+    // IsEmpty operation: check if the stack is empty
+    bool isEmpty(){
+        
+    }
 }
 
