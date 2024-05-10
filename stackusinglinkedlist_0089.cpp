@@ -18,7 +18,7 @@ private:
     Node *top; // Pointer to the top of the stack
 
 public:
-    Stack(){
+    stack(){
         top = NULL; // Initialize the stack with a null top pointer
     }
     // Push operation Inset an element onto the top of the stack
@@ -29,6 +29,15 @@ public:
         top = newNode; // 4. Update the top pointer to the new node
         cout << "Push value: " << value << endl;
         return value;
+    }
+
+    // Pop operation: Remove the topmost element from the stack
+    void pop() {
+        if (isEmpty()) {
+          cout << "Stack is empty." << endl;
+        }
+          cout << "Popped value: " << top->data << endl;
+            top = top->next; // Update the top pointer to the next node
     }
 
     // Peek/Top operation: Retrieve the value of the topmost element without removing it
@@ -52,7 +61,7 @@ public:
 };
 
 int main(){
-    Stack stack;
+    stack stack;
     
     int choice = 0;
     int value;
@@ -72,7 +81,7 @@ int main(){
             stack.push(value); // Push the entered value onto the stack
             break;
         case 2:
-            if (stack.isEmpty()){
+            if (!stack.isEmpty()) {
                 stack.pop(); // Pop the top elment from the stack
             }
             else{
@@ -80,7 +89,7 @@ int main(){
             }
             break;
         case 3:
-            if (!stack.isEmpty()){
+            if (!stack.isEmpty()) {
                 stack.peek(); // Get the value of the top element
             }
             else{
